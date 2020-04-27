@@ -1,0 +1,69 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    
+
+    <title>Document</title>
+    <script>
+        function generateTbl() {
+            var TableOf =document.getElementById("number").value;
+	var text = "<th>Result:- </th><tr><td> </td></tr>";
+	var i;
+	for (i = 1; i < 11; i++)
+	 {
+	  text =text + "<tr	> <td>" + TableOf + "   *   " + i +"   =   " + TableOf*i +"</td><tr><br>";
+	 }
+	 document.getElementById("Result").innerHTML =text;
+
+        }
+    </script>
+</head>
+
+<body>
+   
+    <div class="container-fluid" style="width:15%;height:60px;background-color:white;">
+		<p style="font-size:42px;text-align:center;height:10%;width:10%;"><bold>Tables</bold></p>
+	</div>
+
+	<div class="container" style="width:100%;height:350px;margin-top:15px;">
+		<div class="row" style="margin:0px;padding:0px;background-color:white;">
+			<div class="col-xs-6" style="height:350px;margin:0px;padding:0px;width:50%;">
+				
+				<div class="row" style="margin:0px;padding:0px;width:100%;height:100px;margin-top:30px;background-color:white;border:1px solid black;">
+					<div class="col-xs-12" style="margin:0px;padding:0px;width:100%;height:100px;">
+						<table style="width:100%;margin:0px;padding:0px;height:100px;">
+							<tr   style="margin:0px;padding:0px;width:100%;">
+								<td style="font-size:25px;width:50%;">Enter Number:</td>
+								<td><input type="text" id="number"  style="border:2px solid black;border-radius:0px;width:60%;margin-left:5%;height:80%;"> </td>
+							</tr>
+							<tr style="border:0px solid black;margin:0px;padding:0px;width:100%;" colspan="2">
+								<td colspan="2"><button style="width:100px;margin-left:80%;"type="button" class="btn btn-primary" onclick="generateTbl()">Click here</button></td>
+                            </tr>
+                            
+
+						</table>
+
+
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-6"  style="width:50%;height:350px;font-size:19px;background-color:lightgoldenrodyellow;">
+				<table id="Result" style="height:30px;width:100%;font-size:20px;">
+
+				</table>
+			</div>
+		</div>	
+
+	</div>
+    
+</body>
+
+</html>
